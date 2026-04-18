@@ -1,7 +1,3 @@
-# pillarEngine
-pillarEngine is C++ 3D engine. You can compile games!
-
-#instructions
 # PillarEngine
 
 Полноценный 3D игровой движок на C++ / OpenGL с редактором, скриптами, VPK-архивами и системой сборки игр.

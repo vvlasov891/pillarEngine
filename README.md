@@ -35,7 +35,7 @@
 ## Сборка (Visual Studio)
 
 ```bat
-git clone <repo_url> PillarEngine
+git clone <https://github.com/vvlasov891/pillarEngine> PillarEngine
 cd PillarEngine
 
 # Создать build директорию и сгенерировать VS solution

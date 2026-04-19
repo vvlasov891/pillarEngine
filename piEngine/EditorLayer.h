@@ -1,0 +1,16 @@
+build/
+.vs/
+*.user
+*.suo
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+__temp_play__.pilevel
+packer.log
+pillar.log
+extracted/

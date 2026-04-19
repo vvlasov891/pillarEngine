@@ -1,0 +1,164 @@
+{
+    "name": "Demo Level",
+    "version": 1,
+    "entities": [
+        {
+            "tag": "Directional Light",
+            "uuid": 1001,
+            "active": true,
+            "transform": {
+                "position": [0, 10, 0],
+                "rotation": [-45, -30, 0],
+                "scale":    [1,   1,  1]
+            },
+            "dirLight": {
+                "color":     [1.0, 0.98, 0.92],
+                "intensity": 1.0
+            }
+        },
+        {
+            "tag": "Floor",
+            "uuid": 1002,
+            "active": true,
+            "transform": {
+                "position": [0, 0, 0],
+                "rotation": [0, 0, 0],
+                "scale":    [1, 1, 1]
+            },
+            "meshRenderer": {
+                "meshPath":    "__plane__",
+                "texturePath": "",
+                "color":       [0.45, 0.45, 0.45]
+            },
+            "boxCollider": {
+                "center":    [0, -0.1, 0],
+                "halfExt":   [5, 0.1, 5],
+                "isTrigger": false
+            }
+        },
+        {
+            "tag": "Cube1",
+            "uuid": 1003,
+            "active": true,
+            "transform": {
+                "position": [3, 0.5, 0],
+                "rotation": [0, 30, 0],
+                "scale":    [1, 1, 1]
+            },
+            "meshRenderer": {
+                "meshPath":    "__cube__",
+                "texturePath": "",
+                "color":       [0.8, 0.3, 0.2]
+            },
+            "boxCollider": {
+                "center":    [0, 0, 0],
+                "halfExt":   [0.5, 0.5, 0.5],
+                "isTrigger": false
+            }
+        },
+        {
+            "tag": "Cube2",
+            "uuid": 1004,
+            "active": true,
+            "transform": {
+                "position": [-2, 0.5, 2],
+                "rotation": [0, 0, 0],
+                "scale":    [1, 2, 1]
+            },
+            "meshRenderer": {
+                "meshPath":    "__cube__",
+                "texturePath": "",
+                "color":       [0.2, 0.5, 0.8]
+            }
+        },
+        {
+            "tag": "Sphere1",
+            "uuid": 1005,
+            "active": true,
+            "transform": {
+                "position": [0, 0.5, -3],
+                "rotation": [0, 0, 0],
+                "scale":    [1, 1, 1]
+            },
+            "meshRenderer": {
+                "meshPath":    "__sphere__",
+                "texturePath": "",
+                "color":       [0.3, 0.8, 0.3]
+            }
+        },
+        {
+            "tag": "PointLight1",
+            "uuid": 1006,
+            "active": true,
+            "transform": {
+                "position": [-3, 2, -2],
+                "rotation": [0, 0, 0],
+                "scale":    [1, 1, 1]
+            },
+            "pointLight": {
+                "color":     [0.4, 0.6, 1.0],
+                "intensity": 2.0,
+                "range":     12.0
+            }
+        },
+        {
+            "tag": "Player",
+            "uuid": 2001,
+            "active": true,
+            "transform": {
+                "position": [0, 0, 5],
+                "rotation": [0, -90, 0],
+                "scale":    [0.5, 1.8, 0.5]
+            },
+            "meshRenderer": {
+                "meshPath":    "__capsule__",
+                "texturePath": "",
+                "color":       [0.2, 0.6, 1.0]
+            },
+            "rigidbody": {
+                "mass":        80.0,
+                "useGravity":  true,
+                "isKinematic": false,
+                "drag":        0.05
+            },
+            "capsuleCollider": {
+                "center": [0, 0, 0],
+                "radius": 0.4,
+                "height": 1.8
+            },
+            "scripts": ["PlayerController"]
+        },
+        {
+            "tag": "MainCamera",
+            "uuid": 2002,
+            "active": true,
+            "transform": {
+                "position": [0, 1.7, 5],
+                "rotation": [0, -90, 0],
+                "scale":    [1, 1, 1]
+            },
+            "camera": {
+                "fov":    75.0,
+                "near":   0.05,
+                "far":    500.0,
+                "isMain": true
+            }
+        },
+        {
+            "tag": "Enemy",
+            "uuid": 3001,
+            "active": true,
+            "transform": {
+                "position": [-5, 0, -5],
+                "rotation": [0, 0, 0],
+                "scale":    [0.6, 1.8, 0.6]
+            },
+            "meshRenderer": {
+                "meshPath":    "__capsule__",
+                "texturePath": "",
+                "color":       [0.9, 0.2, 0.2]
+            },
+            "scripts": ["EnemyAI"]
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+name: Notify Discord about new Releases
+
+on:
+  release:
+    types: [published]  # Срабатывает, когда релиз официально опубликован
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Send Release info to Discord
+        uses: SethCohen/github-releases-to-discord@v1
+        with:
+          webhook_url: ${{ secrets.WEBHOOK_URL }}
+          # Необязательные, но полезные настройки:
+          # color: "2105893"       # Цвет сообщения (можно поменять)
+          # username: "Релиз-бот"  # Имя бота в Discord
+          # content: "Новый релиз!" # Дополнительный текст перед сообщением
